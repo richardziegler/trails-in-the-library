@@ -3,26 +3,24 @@ import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Reader from "../components/react/Reader";
 import ThemeToggle from "../components/react/ThemeToggle";
+import Header from "../components/react/Header"
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
+<script>
+	import { $currentTheme } from "../stores/themeStore";
+	import { useStore } from "@nanostores/react";
+	const currentTheme = useStore($currentTheme)
+</script>
+
+
 <Layout>
 	<div id="container">
 		<main class="">
-
-
-			<div class="flex flex-row items-center justify-between bg-green-400">
-				<div class="ml-6 text-3xl dark:text-gray-200"
-					>Welcome to Trails in the Library</div
-				>
-				<div class="flex items-center mt-1.5 mr-5">
-					<ThemeToggle client:load />
-				</div>
-			</div>
-
-
+			<Header client:load />
 			<div class="flex justify-self-center">
 				<Reader client:load />
 			</div>
