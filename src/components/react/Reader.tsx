@@ -93,9 +93,9 @@ export default function Reader() {
 
   return (
     // <div className='' style={{ height: '70vh', width: '90vw' }}>
-    <div className='h-lvh w-lvw md:h-[60em] md:w-[70em] md:mt-12'>
+    <div className='h-lvh w-lvw md:h-[42em] md:w-[70em] md:mt-3'>
       <ReactReader
-        title="test"
+        title="Tales of Trails"
         url="/books/trails.epub"
         location={location}
         locationChanged={(epubcfi: string) => setLocation(epubcfi)}

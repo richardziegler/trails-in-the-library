@@ -7,7 +7,7 @@ export default function Header() {
 
     return (
         <>
-            <div className={`flex flex-row items-center justify-between ${currentTheme === 'light' ? 'bg-orange-100 text-gray-600' : 'bg-gray-600 text-orange-100'} `}>
+            <div className={`flex flex-row shadow-2xl items-center justify-between md:h-12 ${currentTheme === 'light' ? 'bg-orange-100 text-gray-600' : 'bg-gray-600 text-orange-100'} `}>
             <div className="ml-6 text-3xl">Welcome to Trails in the Library</div>
             <div className="flex items-center mt-1.5 mr-5">
                 <ThemeToggle />
