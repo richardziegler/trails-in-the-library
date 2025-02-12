@@ -57,7 +57,7 @@ export default function Reader() {
     },
     readerArea: {
       ...ReactReaderStyle.readerArea,
-      backgroundColor: '#000',
+      backgroundColor: '#141521',
       transition: undefined,
     },
     titleArea: {
@@ -66,20 +66,24 @@ export default function Reader() {
     },
     tocArea: {
       ...ReactReaderStyle.tocArea,
-      background: '#111',
+      background: '#141521',
     },
     tocButtonExpanded: {
       ...ReactReaderStyle.tocButtonExpanded,
-      background: '#222',
+      background: '#141521',
     },
     tocButtonBar: {
       ...ReactReaderStyle.tocButtonBar,
-      background: '#fff',
+      background: '#ccc',
     },
     tocButton: {
       ...ReactReaderStyle.tocButton,
       color: 'white',
     },
+    toc: {
+      ...ReactReaderStyle.toc,
+      color: 'white'
+    }
   }
 
   const [location, setLocation] = useState<string | number>(0)
@@ -90,9 +94,7 @@ export default function Reader() {
       updateTheme(rendition.current, theme)
     }
   }, [theme])
-
   return (
-    // <div className='' style={{ height: '70vh', width: '90vw' }}>
     <div className='h-lvh w-lvw md:h-[42em] md:w-[70em] md:mt-3'>
       <ReactReader
         title="Tales of Trails"
